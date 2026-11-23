@@ -1,4 +1,5 @@
 import { Brand } from './components/Brand.tsx';
+import { Hero } from './components/Hero.tsx';
 import { SiteFooter } from './components/SiteFooter.tsx';
 import { SiteHeader } from './components/SiteHeader.tsx';
 import { brand, contact, journey } from './content.ts';
@@ -10,34 +11,11 @@ export function App() {
       <SiteHeader />
 
       <main id="conteudo" tabIndex={-1}>
-        <section className="hero" aria-labelledby="hero-title">
-          <picture className="hero__image">
-            <source
-              media="(max-width: 40rem)"
-              srcSet="./media/photos/casa-mobile-480.webp 480w, ./media/photos/casa-mobile-800.webp 800w"
-              sizes="100vw"
-              width="800"
-              height="960"
-            />
-            <img
-              src="./media/photos/casa-1280.webp"
-              srcSet="./media/photos/casa-800.webp 800w, ./media/photos/casa-1280.webp 1280w, ./media/photos/casa-1675.webp 1675w"
-              sizes="100vw"
-              width="1675"
-              height="939"
-              alt=""
-              fetchPriority="high"
-            />
-          </picture>
-          <h1 id="hero-title">Seu novo imóvel, aqui</h1>
-        </section>
+        <Hero />
 
         <section className="intro" id="seu-desejo" aria-labelledby="intro-title">
           <div className="intro__visual">
-            <div className="intro__pattern" aria-hidden="true">
-              <img src="./media/brand/pattern-left.svg" width="1079" height="770" loading="lazy" alt="" />
-              <img src="./media/brand/pattern-right.svg" width="903" height="770" loading="lazy" alt="" />
-            </div>
+            <img className="intro__pattern" src="./media/brand/pattern.svg" width="963" height="770" loading="lazy" alt="" />
             <Brand />
           </div>
           <div className="intro__copy">
@@ -91,7 +69,7 @@ export function App() {
             className="about__portrait"
             src="./media/photos/andriele-560.webp"
             srcSet="./media/photos/andriele-360.webp 360w, ./media/photos/andriele-560.webp 560w, ./media/photos/andriele-900.webp 900w"
-            sizes="(max-width: 40rem) 92vw, (max-width: 47.99rem) 23rem, (max-width: 120rem) 25vw, 450px"
+            sizes="(max-width: 47.99rem) calc(100vw - 2.5rem), (max-width: 120rem) 25vw, 450px"
             width="1122"
             height="1402"
             loading="lazy"

@@ -2,7 +2,7 @@ import { brand, navigation } from '../content.ts';
 
 export function SiteHeader() {
   return (
-    <header className="site-header" id="inicio">
+    <header className="site-header">
       <div className="site-header__inner">
         <a className="site-header__brand" href="#inicio" aria-label={`${brand.name}, início`}>
           <img src="./media/brand/header-monogram.svg" width="39" height="26" alt="" />
