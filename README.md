@@ -20,7 +20,7 @@ pnpm dev
 - `src/components/` contém a marca, o cabeçalho e o rodapé.
 - `src/styles/site.css` define as cores, a tipografia e os layouts responsivos.
 - `public/media/` contém os SVGs do Figma e as fotos em WebP. Mantenha as larguras em `srcSet` coerentes ao substituir uma imagem.
-- `src/components/Hero.tsx` usa a mesma foto em duas camadas. Ao trocar a foto de abertura, atualize também as máscaras `casa-recorte*.webp` para preservar o alinhamento com o telhado.
+- `src/components/Hero.tsx` usa a mesma foto em duas camadas. Ao trocar a foto de abertura, atualize também as máscaras `casa-silhueta*.webp`. Mantenha o recorte alinhado ao telhado e opaco abaixo dele para que o título desapareça de forma contínua.
 - `index.html` contém o título e a descrição da página para busca e compartilhamento.
 
 ## Publicação

@@ -23,12 +23,12 @@ export function App() {
                 <li key={title}>
                   <details className="journey__step">
                     <summary>
+                      <span className="journey__prompt journey__prompt--show">Clique para mostrar</span>
+                      <span className="journey__prompt journey__prompt--hide">Clique para recolher</span>
                       <span className="key-rule" aria-hidden="true">
                         <img src="./media/icons/key-gold.svg" width="35" height="35" loading="lazy" alt="" />
                       </span>
                       <span className="journey__label">{String(index + 1).padStart(2, '0')} / {label}</span>
-                      <span className="journey__prompt journey__prompt--show">Clique para mostrar</span>
-                      <span className="journey__prompt journey__prompt--hide">Clique para recolher</span>
                     </summary>
                     <div className="journey__details">
                       <h3>{title}</h3>

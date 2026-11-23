@@ -88,17 +88,6 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   color: var(--cream);
 }
 
-.site-header::after {
-  position: absolute;
-  inset: 100% 0 auto;
-  block-size: 0.75rem;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  content: '';
-  pointer-events: none;
-}
-
-.site-header :focus-visible { outline-color: var(--ink); }
-
 .site-header__inner {
   display: flex;
   align-items: center;
@@ -120,7 +109,6 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
 
 .site-header__brand img:first-child { inline-size: clamp(1.65rem, 2vw, 2.4375rem); block-size: auto; }
 .site-header__brand img:last-child { inline-size: clamp(7.8rem, 9.25vw, 11.0625rem); block-size: auto; }
-.site-header__brand img { filter: drop-shadow(0 1px 1px #28101085); }
 
 .site-header__links {
   display: flex;
@@ -139,7 +127,6 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   letter-spacing: 0.108em;
   line-height: 1.14;
   text-decoration: none;
-  text-shadow: 0 1px 2px #281010b3;
   text-transform: uppercase;
   text-underline-offset: 0.3em;
 }
@@ -184,7 +171,7 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   .hero__image--foreground {
     display: block;
     z-index: 3;
-    mask: url('/media/photos/casa-recorte.webp') center bottom / cover no-repeat;
+    mask: url('/media/photos/casa-silhueta.webp') center bottom / cover no-repeat;
   }
 
   @media (prefers-reduced-motion: no-preference) {
@@ -221,10 +208,17 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   pointer-events: none;
 }
 
+.intro__identity {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  inline-size: 100%;
+}
+
 .intro__cycle {
   position: absolute;
   inset-block-start: 50%;
-  inset-inline-end: 0.5rem;
+  inset-inline-start: calc(100% + clamp(0.875rem, 1.5vw, 1.75rem));
   display: grid;
   place-items: center;
   inline-size: 2.75rem;
@@ -247,8 +241,6 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   justify-items: center;
   inline-size: min(72%, 42.5rem);
 }
-
-.intro__visual .brand { inline-size: min(72%, calc(100% - 7.5rem), 42.5rem); }
 
 .brand img { block-size: auto; }
 .brand__monogram { inline-size: 24.65%; }
@@ -336,11 +328,14 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
 
 .journey__prompt {
   display: block;
-  color: var(--ivory);
-  font-size: 0.875rem;
-  line-height: 1.45;
+  margin-block-end: 0.4rem;
+  color: #b9a074;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+.journey__step summary:is(:hover, :focus-visible) .journey__prompt {
   text-decoration: underline;
-  text-decoration-color: var(--gold-soft);
   text-underline-offset: 0.25em;
 }
 
@@ -489,26 +484,21 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
 
 @media (max-width: 58rem) {
   .site-header__links { column-gap: 0.85rem; }
-  .intro__copy { padding-inline-start: 2.5rem; }
+  .intro__copy { padding-inline-start: 4.75rem; }
   .about__panel { padding: 1.75rem; }
 }
 
 @media (max-width: 47.99rem) {
-  :root {
-    --mobile-header-padding: 0.375rem;
-    --header-height: calc(2 * (var(--header-control-size) + var(--mobile-header-padding)));
-  }
+  :root { --header-height: 3.5rem; }
 
-  .site-header__inner {
-    flex-direction: column;
-    justify-content: center;
-    gap: 0;
-    padding-block: var(--mobile-header-padding);
-  }
+  .site-header__inner { justify-content: center; }
+  .site-header__brand { padding-block-end: 0; }
+  .site-header__nav { display: none; }
 
-  .site-header__links { justify-content: center; }
   .intro { grid-template-columns: 1fr; padding-block: 2.75rem 3.75rem; }
   .intro__visual { inline-size: min(100%, 32rem); margin-inline: auto; }
+  .intro__identity { gap: 0.875rem; }
+  .intro__cycle { position: static; translate: none; }
   .intro__copy { padding: 2.5rem var(--gutter) 0; }
   .intro__copy h2 br { display: none; }
   .journey { padding-block: 3.75rem; }
@@ -522,10 +512,6 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
 }
 
 @media (max-width: 40rem) {
-  .site-header__inner { inline-size: calc(100% - 1rem); }
-  .site-header__links { column-gap: clamp(0.375rem, 1.8vw, 0.875rem); }
-  .site-header__links a { letter-spacing: 0.01em; }
-
   .hero {
     --title-offset: clamp(1.25rem, 6vw, 2.5rem);
     aspect-ratio: 5 / 6;
@@ -539,7 +525,7 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
     background: linear-gradient(#28101042, transparent 65%);
   }
 
-  .hero__image--foreground { mask-image: url('/media/photos/casa-recorte-mobile.webp'); }
+  .hero__image--foreground { mask-image: url('/media/photos/casa-silhueta-mobile.webp'); }
 
   .hero h1 {
     max-inline-size: 11ch;
@@ -561,12 +547,4 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
     margin: 0;
     text-align: center;
   }
-}
-
-@media (max-width: 23rem) {
-  :root {
-    --header-height: calc(3 * var(--header-control-size) + 2 * var(--mobile-header-padding));
-  }
-
-  .site-header__links { max-inline-size: 17rem; }
 }

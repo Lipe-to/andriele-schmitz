@@ -14,21 +14,23 @@ export function Desire() {
           loading="lazy"
           alt=""
         />
-        <Brand />
-        <button
-          className="intro__cycle"
-          id="intro-cycle"
-          type="button"
-          aria-controls="intro-pattern"
-          aria-label="Trocar planta"
-          title="Trocar planta"
-          hidden
-        >
-          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M21 6v6h-6" />
-            <path d="M21 12a9 9 0 1 0-2.8 6.5" />
-          </svg>
-        </button>
+        <div className="intro__identity">
+          <Brand />
+          <button
+            className="intro__cycle"
+            id="intro-cycle"
+            type="button"
+            aria-controls="intro-pattern"
+            aria-label="Trocar planta"
+            title="Trocar planta"
+            hidden
+          >
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M21 6v6h-6" />
+              <path d="M21 12a9 9 0 1 0-2.8 6.5" />
+            </svg>
+          </button>
+        </div>
         <span id="intro-plan-status" className="visually-hidden" role="status" />
       </div>
       <div className="intro__copy">

@@ -8,7 +8,7 @@ export function SiteHeader() {
           <img src="./media/brand/header-monogram.svg" width="39" height="26" alt="" />
           <img src="./media/brand/header-name.svg" width="177" height="21" alt="" />
         </a>
-        <nav aria-label="Navegação principal">
+        <nav className="site-header__nav" aria-label="Navegação principal">
           <ul className="site-header__links">
             {navigation.map(({ label, target }) => (
               <li key={target}><a href={target}>{label}</a></li>
