@@ -199,13 +199,25 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   aspect-ratio: 963 / 770;
 }
 
+.intro__patterns {
+  position: absolute;
+  inset: 0;
+  opacity: 0.58;
+  pointer-events: none;
+}
+
 .intro__pattern {
   position: absolute;
   inset: 0;
   inline-size: 100%;
   block-size: 100%;
-  opacity: 0.58;
-  pointer-events: none;
+  opacity: 0;
+}
+
+.intro__pattern[data-current] { opacity: 1; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .intro__pattern { transition: opacity 550ms ease-in-out; }
 }
 
 .intro__identity {

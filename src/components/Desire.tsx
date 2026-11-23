@@ -5,15 +5,20 @@ export function Desire() {
   return (
     <section className="intro" id="seu-desejo" aria-labelledby="intro-title">
       <div className="intro__visual">
-        <img
-          className="intro__pattern"
-          id="intro-pattern"
-          src={floorPlans[0]}
-          width="963"
-          height="770"
-          loading="lazy"
-          alt=""
-        />
+        <div className="intro__patterns" id="intro-pattern" aria-hidden="true">
+          {floorPlans.map((src, index) => (
+            <img
+              className="intro__pattern"
+              key={src}
+              src={src}
+              width="963"
+              height="770"
+              loading="lazy"
+              alt=""
+              data-current={index === 0 ? '' : undefined}
+            />
+          ))}
+        </div>
         <div className="intro__identity">
           <Brand />
           <button
