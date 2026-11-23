@@ -1,4 +1,4 @@
-import { Brand } from './components/Brand.tsx';
+import { Desire } from './components/Desire.tsx';
 import { Hero } from './components/Hero.tsx';
 import { SiteFooter } from './components/SiteFooter.tsx';
 import { SiteHeader } from './components/SiteHeader.tsx';
@@ -13,16 +13,7 @@ export function App() {
       <main id="conteudo" tabIndex={-1}>
         <Hero />
 
-        <section className="intro" id="seu-desejo" aria-labelledby="intro-title">
-          <div className="intro__visual">
-            <img className="intro__pattern" src="./media/brand/pattern.svg" width="963" height="770" loading="lazy" alt="" />
-            <Brand />
-          </div>
-          <div className="intro__copy">
-            <h2 id="intro-title">Um olhar<br /> que começa<br /> escutando</h2>
-            <p>Antes de falar sobre imóveis, existe algo mais importante: entender o seu momento, suas prioridades e aquilo que você deseja para os próximos capítulos.</p>
-          </div>
-        </section>
+        <Desire />
 
         <section className="journey" id="possibilidades" aria-labelledby="journey-title">
           <div className="container">
@@ -30,12 +21,20 @@ export function App() {
             <ol className="journey__steps" role="list">
               {journey.map(({ label, title, description }, index) => (
                 <li key={title}>
-                  <div className="key-rule" aria-hidden="true">
-                    <img src="./media/icons/key-gold.svg" width="35" height="35" loading="lazy" alt="" />
-                  </div>
-                  <p className="journey__label">{String(index + 1).padStart(2, '0')} / {label}</p>
-                  <h3>{title}</h3>
-                  <p>{description}</p>
+                  <details className="journey__step">
+                    <summary>
+                      <span className="key-rule" aria-hidden="true">
+                        <img src="./media/icons/key-gold.svg" width="35" height="35" loading="lazy" alt="" />
+                      </span>
+                      <span className="journey__label">{String(index + 1).padStart(2, '0')} / {label}</span>
+                      <span className="journey__prompt journey__prompt--show">Clique para mostrar</span>
+                      <span className="journey__prompt journey__prompt--hide">Clique para recolher</span>
+                    </summary>
+                    <div className="journey__details">
+                      <h3>{title}</h3>
+                      <p>{description}</p>
+                    </div>
+                  </details>
                 </li>
               ))}
             </ol>

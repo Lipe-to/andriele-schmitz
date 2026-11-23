@@ -17,6 +17,12 @@ export const navigation = [
   { label: 'Sobre', target: '#sobre' },
 ];
 
+export const floorPlans = [
+  './media/brand/pattern.svg',
+  './media/brand/pattern-2.svg',
+  './media/brand/pattern-3.svg',
+];
+
 export const journey = [
   {
     label: 'Ideia',
