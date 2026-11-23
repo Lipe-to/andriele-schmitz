@@ -230,10 +230,15 @@ h2 { font-size: var(--section-heading); line-height: 1.02; }
   color: var(--ink);
   cursor: pointer;
   translate: 0 -50%;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .intro__cycle[hidden] { display: none; }
-.intro__cycle:is(:hover, :active) { background: var(--gold-soft); }
+.intro__cycle:active { background: var(--gold-soft); }
+
+@media (min-width: 48rem) and (hover: hover) and (pointer: fine) {
+  .intro__cycle:hover { background: var(--gold-soft); }
+}
 
 .brand {
   position: relative;

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="963" height="770" viewBox="0 0 963 770" fill="none">
+  <g stroke="#320e0e" stroke-opacity=".21" stroke-linecap="square">
+    <path d="M-6 2.272H960.728V767.272H-6" stroke-width="4.544"/>
+    <path d="M-6 17.885H945.181V751.66H-6" stroke-width="1.666"/>
+    <path d="M-6 282H185M285 282H475M570 282H757M850 282H960.728M330 2.272V282M641 2.272V282
+      M-6 482H118M216 482H433M532 482H742M842 482H960.728M291 482V767.272M627 482V767.272" stroke-width="4.544"/>
+    <g stroke-width="1.666">
+      <rect x="34" y="69" width="207" height="131" rx="6"/>
+      <rect x="371" y="59" width="216" height="113"/>
+      <rect x="371" y="189" width="135" height="43"/>
+      <rect x="691" y="61" width="195" height="154" rx="6"/>
+      <path d="M35 318H156V353H35ZM805 405H911V446H805Z"/>
+      <rect x="43" y="546" width="190" height="139"/>
+      <rect x="351" y="572" width="218" height="137" rx="7"/>
+      <rect x="688" y="565" width="192" height="134"/>
+      <path d="M43 574H233M688 597H880"/>
+    </g>
+  </g>
+</svg>

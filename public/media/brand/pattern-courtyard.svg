@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="963" height="770" viewBox="0 0 963 770" fill="none">
+  <g stroke="#320e0e" stroke-opacity=".21" stroke-linecap="square">
+    <path d="M-6 2.272H960.728V767.272H-6" stroke-width="4.544"/>
+    <path d="M-6 17.885H945.181V751.66H-6" stroke-width="1.666"/>
+    <path d="M332 217H443M544 217H670V320M670 420V552H551M451 552H332V434M332 327V217
+      M-6 369H175M266 369H332M670 388H767M859 388H960.728M489 2.272V217M461 552V767.272"
+      stroke-width="4.544"/>
+    <g stroke-width="1.666">
+      <path d="M50 60H432V123H50ZM45 153H198V303H45Z"/>
+      <rect x="551" y="58" width="334" height="117" rx="6"/>
+      <rect x="739" y="234" width="148" height="99"/>
+      <rect x="745" y="460" width="139" height="214" rx="7"/>
+      <rect x="42" y="445" width="203" height="108" rx="6"/>
+      <rect x="83" y="619" width="282" height="80"/>
+      <rect x="513" y="623" width="149" height="89"/>
+      <path d="M373 254H629V514H373Z" stroke-dasharray="8 6"/>
+      <circle cx="429" cy="304" r="26"/>
+      <circle cx="577" cy="463" r="27"/>
+      <path d="M473 470H542M484 292H550"/>
+    </g>
+  </g>
+</svg>

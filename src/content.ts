@@ -18,9 +18,9 @@ export const navigation = [
 ];
 
 export const floorPlans = [
-  './media/brand/pattern.svg',
-  './media/brand/pattern-2.svg',
-  './media/brand/pattern-3.svg',
+  './media/brand/pattern-gallery.svg',
+  './media/brand/pattern-open.svg',
+  './media/brand/pattern-courtyard.svg',
 ];
 
 export const journey = [
